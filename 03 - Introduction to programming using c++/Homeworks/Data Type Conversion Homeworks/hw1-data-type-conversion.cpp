@@ -35,10 +35,16 @@ int main(){
     // 4)
     float n3 = 55.23;
     string floatToString = to_string(n3);
-    int floatToInt = (int)n3;
+
+    int implicitFloatToInt = n3; // Implicit Conversion
+    int explicitFloatToInt = (int)n3; // Explicit Conversion
+    int explicitFloatToIntFunction = int(n3); // Explicit Conversion
 
     cout << "Float to String: " << floatToString << endl;
-    cout << "Float to Int: " << floatToInt << endl;
+
+    cout << "implicit Float to Int: " << implicitFloatToInt << endl;
+    cout << "explicit Float to Int: " << explicitFloatToInt << endl;
+    cout << "explicit Float to Int: " << explicitFloatToIntFunction << endl;
 
     
 
