@@ -46,6 +46,5 @@ int main(){
     cout << "explicit Float to Int: " << explicitFloatToInt << endl;
     cout << "explicit Float to Int: " << explicitFloatToIntFunction << endl;
 
-    
-
+    return 0;
 }
