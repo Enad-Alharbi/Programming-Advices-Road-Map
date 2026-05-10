@@ -41,4 +41,6 @@ int main(){
     printILoveProgramming();
     cout << "\n";
     printLetterH();
+
+    return 0;
 }
