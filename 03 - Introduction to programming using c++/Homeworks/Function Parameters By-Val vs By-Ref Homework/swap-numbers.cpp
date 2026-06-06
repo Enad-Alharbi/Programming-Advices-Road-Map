@@ -10,8 +10,8 @@ void swapNumbers(int &num1, int &num2){
     num1 = num2;
     num2 = tempNum;
 
-    cout << "\033[32m" << "Number 1 after swap in main function: " << num1 << endl;
-    cout << "\033[32m" << "Number 2 after swap in main function: " << num2 << endl;
+    cout << "\033[32m" << "Number 1 after swap in swapNumbers function: " << num1 << endl;
+    cout << "\033[32m" << "Number 2 after swap in swapNumbers function: " << num2 << endl;
 
 }
 
