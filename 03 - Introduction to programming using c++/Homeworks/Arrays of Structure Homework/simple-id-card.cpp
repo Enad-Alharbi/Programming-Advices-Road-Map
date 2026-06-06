@@ -2,53 +2,57 @@
 using namespace std;
 
 // This program will print id card using arrays, structures, and functions.
-// ** THIS IS MY SOLUTION **
 
-struct strIdCard{
+
+struct strInfo{
     string firstName;
     string lastName;
     short age;
     string phoneNumber;
 };
 
-void readPerson(strIdCard persons[2], short personNumber){
+void readInfo(strInfo &info){
     cout << "Please enter your First Name: " << endl;
-    cin >> persons[personNumber].firstName;
+    cin >> info.firstName;
 
     cout << "Please enter your Last Name: " << endl;
-    cin >> persons[personNumber].lastName;
+    cin >> info.lastName;
 
     cout << "Please enter your Age: " << endl;
-    cin >> persons[personNumber].age;
+    cin >> info.age;
 
     cout << "Please enter your Phone Number: " << endl;
-    cin >> persons[personNumber].phoneNumber;
+    cin >> info.phoneNumber;
 }
 
-void printPerson(strIdCard persons[2], short personNumber){
+void printInfo(strInfo info){
     cout << "*****************************\n";
-    cout << "First Name: " << persons[personNumber].firstName << endl;
-    cout << "Last Name: "<< persons[personNumber].lastName << endl;
-    cout << "Age: " << persons[personNumber].age << endl;
-    cout << "Phone Number: " << persons[personNumber].phoneNumber << endl;
+    cout << "First Name: " << info.firstName << endl;
+    cout << "Last Name: "<< info.lastName << endl;
+    cout << "Age: " << info.age << endl;
+    cout << "Phone Number: " << info.phoneNumber << endl;
     cout << "*****************************\n";
 }
 
-void printAllPersons(strIdCard persons[2]){
-    printPerson(persons, 0);
-    printPerson(persons, 1);
+void readPersonsInfo(strInfo persons[2]){
+    readInfo(persons[0]);
+    cout << "\n\n";
+    readInfo(persons[1]);
 }
+
+void printPersonsInfo(strInfo persons[2]){
+    cout << "\n\n";
+    printInfo(persons[0]);
+    cout << "\n";
+    printInfo(persons[1]);
+}
+
 
 int main(){
-    strIdCard persons[2];
+    strInfo persons[2];
 
-    readPerson(persons, 0);
-
-    cout << "\n\n";
-
-    readPerson(persons, 1);
-
-    printAllPersons(persons);
+    readPersonsInfo(persons);
+    printPersonsInfo(persons);
 
     return 0;
 }
